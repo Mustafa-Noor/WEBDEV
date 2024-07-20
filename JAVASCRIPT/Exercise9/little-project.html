@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Youtube Subsribe Button</p>
+    <button onclick="checkSubscribe()" class="subscribe-button">Subscribe</button>
+
+    <script>
+
+        function checkSubscribe() {
+            const subscribeButton = document.querySelector('.subscribe-button');
+            subscribeButton.innerHTML = subscribeButton.innerHTML == 'Subscribe' ? 'Subscribed' : 'Subscribe';
+        }
+    </script>
+</body>
+</html>

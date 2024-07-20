@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+        .flexy
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: blueviolet;
+            height: 50px;
+        }
+        .left
+        {
+            padding-left: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        input
+        {
+            width: 400px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            border-radius: 20px;
+            border: none;
+        }
+        button
+        {
+            margin-right: 10px;
+            background-color: transparent;
+            border-color: white;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px 15px;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flexy">
+        <div class="left">
+            Home
+        </div>
+        <div class="middle">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="right">
+            <button>Download</button>
+        </div>
+    </div>
+</body>
+</html>

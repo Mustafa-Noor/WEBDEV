@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="start-button" onclick="changeButton();">Start</button><br><br>
+    <button class="cart-button" onclick="displayAdded();">Cart</button>
+    <div class="added"></div>
+
+    <script>
+        function changeButton()
+        {
+            const button = document.querySelector('.start-button');
+            button.innerHTML = 'Loading...';
+
+            setTimeout(function ()
+        {
+            button.innerHTML = 'Finished!';
+        }, 1000)
+        }
+
+
+        let timeoutID;
+        function displayAdded()
+        {
+            
+             let html = '<p>Added</p>';
+             document.querySelector('.added').innerHTML = html;
+             
+             clearTimeout(timeoutID);
+             timeoutID = setTimeout(function()
+            {
+                document.querySelector('.added').innerHTML = '';
+            }, 1000)
+
+        }
+    </script>
+</body>
+</html>

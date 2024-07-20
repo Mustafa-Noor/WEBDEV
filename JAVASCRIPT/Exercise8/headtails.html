@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkResult('heads')">
+        heads
+    </button>
+    <button onclick="checkResult('tails')">
+        tails
+    </button>
+
+    <h1 id="result">
+        
+    </h1>
+
+
+    <script>
+
+
+        Score = 
+        {
+            wins : 0,
+            losses : 0
+        }
+
+
+        const storedScore = localStr23orage.getItem('score');
+
+        Score = JSON.parse(storedScore);
+
+
+        function playGame()
+        {
+            const random = Math.random();
+            return random<0.5 ? 'heads':'tails';
+    }
+
+        function checkResult(playerMove)
+        {
+            const gameResult = playGame();
+            if(playerMove===gameResult)
+        {
+            document.getElementById('result').textContent = `You Won! It came out to be ${gameResult}`;
+            Score.wins++;
+            
+
+        }
+            else
+            {
+            document.getElementById('result').textContent = `You Lost! It came out to be ${gameResult}`;
+            Score.losses++;
+            
+            }
+
+            localStorage.setItem('score', JSON.stringify(Score));
+            console.log(JSON.stringify(Score));
+            alert(`You won this time wins: ${Score.wins} losses: ${Score.losses}`);
+        }
+        
+    </script>
+</body>
+</html>

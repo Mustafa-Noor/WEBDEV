@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+
+        .button-flex {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+
+        }
+
+        button {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 100px;
+            overflow: hidden;
+            padding: 0;
+
+        }
+
+        button img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        button img:hover {
+            filter: brightness(0.7);
+            /* Darken the image */
+        }
+
+        button:hover {
+
+            border-color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="wrapper">
+        <div class="button-flex">
+            <button class="paper" onclick="Game('paper')">
+                <img src="Images/paper.jpeg" alt="">
+            </button>
+            <button class="rock" onclick="Game('rock')">
+                <img src="Images/rocky.jpeg" alt="">
+            </button>
+            <button class="scissors" onclick="Game('scissors')">
+                <img src="Images/scissots.png" alt="">
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+
+        
+        function Game(playerMove)
+        {
+            const  moves = ['rock', 'paper', 'scissors'];
+            const random = Math.floor(Math.random()*3);
+            const computerMove = moves[random];
+
+            let result = '';
+
+            if (playerMove === computerMove) {
+                result = 'Tie';
+            } else if (
+                (playerMove === 'rock' && computerMove === 'scissors') ||
+                (playerMove === 'paper' && computerMove === 'rock') ||
+                (playerMove === 'scissors' && computerMove === 'paper')
+            ) {
+                result = 'You Win';
+            } else {
+                result = 'You Lose';
+            }
+
+            alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+        }
+    </script>
+</body>
+
+</html>

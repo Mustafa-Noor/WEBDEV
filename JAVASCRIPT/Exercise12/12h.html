@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+<body>
+    <button class="add-button" onclick="changeMessages('add')">Add</button>
+    <button class="remove-button" onclick="changeMessages('remove')">Remove</button>
+
+    <script>
+        let messages = 2;
+
+        function changeMessages(action)
+        {
+            if(action === 'add')
+            messages++;
+            else
+            messages--;
+        }
+
+        setInterval(function()
+    {
+        if(document.title === 'Interval')
+        document.title = `(${messages}) New messages`;
+        else
+        document.title = 'Interval';
+    }, 2000)
+    </script>
+</body>
+</html>

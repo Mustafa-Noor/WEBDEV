@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 100vh; 
+            flex-direction: column;
+            /* Ensure the body takes up the full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: #f0f0f0;
+            font-size: 20px;
+
+        }
+
+        .container {
+
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: grey;
+            width: 50%;
+            padding: 10px;
+            box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .screen {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: greenyellow;
+            align-self: center;
+            margin: 10px;
+            width: 95%;
+            height: 40px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            width: 100%;
+            gap: 5px;
+            margin-bottom: 10px;
+            height: 25vh;
+
+        }
+        button
+        {
+            border-radius: 10px;
+            font-size: xx-large;
+        }
+        .TEXT {
+            margin: 20px 0 10px 0; /* Adjust margins as needed */
+            font-size: 1.5em; /* Example of adjusting font size */
+            text-align: center;
+        }
+
+        @media (min-width: 800px) 
+        {
+            .buttons
+            {
+                height: 40vh;
+            }
+            .screen
+            {
+                height: 80px;
+            }
+            body, button
+            {
+                font-size: 30px;
+            }
+            button{
+                border-radius: 20px;
+            }
+
+        }
+
+
+        @media (min-width: 1200px) {
+            
+            .buttons
+            {
+                height: 50vh;
+            }
+            .screen
+            {
+                height: 120px;
+            }
+            body, button
+            {
+                font-size: 40px;
+            }
+
+            button{
+                border-radius: 30px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="TEXT">
+        THIS IS A CALCULATOR
+    </div>
+    <div class="container">
+        <div class="screen">
+            
+        </div>
+        <div class="buttons">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>&divide;</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>x</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+            <button>+</button>
+        </div>
+    </div>
+</body>
+
+</html>

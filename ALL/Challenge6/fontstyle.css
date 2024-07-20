@@ -1,0 +1,18 @@
+p
+{
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.Modelname
+{
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.Under
+{
+    text-decoration: underline;
+}
